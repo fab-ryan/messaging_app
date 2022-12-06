@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Chartheader extends StatefulWidget {
-  const Chartheader({super.key});
-
+  const Chartheader({super.key, required this.userName});
+  final String userName;
   @override
   State<Chartheader> createState() => _ChartheaderState();
 }
@@ -27,7 +27,7 @@ class _ChartheaderState extends State<Chartheader> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                 Text(
-                  "<Friends Name>",
+                  widget.userName,
                   style: Theme.of(context)
                       .textTheme
                       .headline6
